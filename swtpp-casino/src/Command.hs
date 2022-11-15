@@ -183,3 +183,17 @@ instance Num Command where
     signum c1 = c1
     fromInteger v
         | v >= 0 = Val (fromInteger v)
+
+program :: IO ()
+program = do {
+    putStr "Enter your Name: "
+    ; name <- getLine
+    ; putStrLn ("Hello " ++ name)
+}
+
+-- Alternativ ohne Klammern
+program2 :: IO ()
+program2 = do 
+    putStr "Enter your Name: "
+    name <- getLine
+    putStrLn ("Hello " ++ name)
